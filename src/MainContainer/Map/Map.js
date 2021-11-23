@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react';
 // import L from 'leaflet';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 const Map =(props)=>{
     const mapRef = useRef(null)
